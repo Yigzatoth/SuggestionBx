@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SuggestionBox - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>SuggestionBox Dashboard</h1>
+
+    <!-- Section to Create Suggestion -->
+    <div class="card">
+        <h2>Create New Suggestion</h2>
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" placeholder="Suggestion title">
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" placeholder="Describe the problem or suggestion..."></textarea>
+        </div>
+        <div class="form-group">
+            <label for="proposedSolution">Proposed Solution:</label>
+            <textarea id="proposedSolution" placeholder="How do you propose to solve this?"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="author">Author (Optional):</label>
+            <input type="text" id="author" placeholder="Your name or nick">
+        </div>
+        <button onclick="createSuggestion()">Publish Suggestion</button>
+    </div>
+
+    <!-- Section to List and Vote -->
+    <div class="card">
+        <h2>Existing Suggestions</h2>
+        <button onclick="loadSuggestions()" class="secondary-btn">Refresh List</button>
+        <div id="suggestionsList">
+            <!-- Suggestions will appear here dynamically -->
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
